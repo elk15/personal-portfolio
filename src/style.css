@@ -125,7 +125,7 @@ a {
     max-width: 800px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 15px;
 }
 
 .card a {
@@ -143,18 +143,19 @@ a {
 .card-info {
     display: flex;
     justify-content: space-between;
-    gap: 60px;
+    gap: 30px;
+    align-items: center;
 }
 
-.card-info div {
+/* .card-info div {
     display: flex;
     flex-direction: column;
     min-width: 150px;
     gap: 10px;
-}
+} */
 
 .card h3 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: 400;
 }
 
@@ -165,25 +166,31 @@ a {
     font-size: 1.6rem;
 }
 
-.card-info .links {
+.card-title .links {
     display: flex;
     gap: 10px;
     flex-direction: row;
+    margin-left: 10px;
+}
+
+.card-title {
+    display: flex;
 }
 
 .card-img {
-    margin-top: 10px;
+    margin-top: 30px;
     border-radius: 10px;
 }
 
 @media screen and (max-width: 1000px) {
     .card-info {
         flex-direction: column;
+        align-items: flex-start;
         gap: 20px;
     }
 
-    .card-info div{
-        gap: 20px;
+    .card-img {
+        margin-top: 15px;
     }
 
     .card {
@@ -200,7 +207,7 @@ a {
     }
 
     .title h1, .title h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .socials{
