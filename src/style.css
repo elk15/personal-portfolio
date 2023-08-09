@@ -128,6 +128,17 @@ a {
     gap: 15px;
 }
 
+.cancel-btn {
+    width: 50px;
+    border: none;
+    background: none;
+    position: absolute;
+    left: 90%;
+    transform: translate(0%, -160%);
+    fill: var(--font-color);
+    cursor: pointer;
+}
+
 .card a {
     color: rgb(27, 27, 27);
     display: flex;
