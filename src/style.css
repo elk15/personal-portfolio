@@ -1,12 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
-
-* {
+@import url('https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@1,600&family=Roboto:wght@300;400;500;900&display=swap');* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
     font-family: 'Roboto', sans-serif;
 }
+
+@font-face {
+
+    font-family: 'titleFont';
+  
+    src: url('./fonts/Belgiano Serif 2.ttf') format('truetype'),
+  
+      url('./fonts/Belgiano Serif 2.otf') format('opentype');  
+  }
 
 :root{
     --font-color: rgb(240, 240, 240);
@@ -19,7 +26,23 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
+
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
     
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .container {
@@ -31,7 +54,7 @@ body {
     "title socials"
     "projects .";
     max-width: 1200px;
-    gap: 10px;
+    gap: 20px;
 }
 
 .socials {
@@ -43,6 +66,16 @@ body {
 
 .title {
     grid-area: title;
+
+}
+
+.title h1, .title h2{
+    font-family: 'titleFont', serif;
+    font-size: 2.5em;
+}
+
+.title h2 {
+    margin-left: 50px;
 }
 
 #projects {
@@ -73,6 +106,10 @@ a {
         "title"
         "projects"
         "socials";
+    }
+
+    .title h1, .title h2 {
+        font-size: 2rem;
     }
 
     .socials{
