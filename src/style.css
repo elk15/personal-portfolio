@@ -98,6 +98,19 @@ a {
 .project {
     display: flex;
     align-items: center;
+    background: none;
+    border: none;
+    color: var(--font-color);
+    justify-content: space-between;
+    max-width: 300px;
+    font-size: 1.2rem;  
+    cursor: pointer;  
+}
+
+.project div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
 @media screen and (max-width: 600px) {
