@@ -1,16 +1,22 @@
 import './style.css';
 
-const firstProjectBtn = document.querySelector('#one');
+function closeAllModals() {
+    document.querySelectorAll('.card').forEach((card) => {
+        card.classList.remove('move');
+    });
+}
 
-firstProjectBtn.addEventListener('mouseover', () => {
-    document.querySelector('#one-card').classList.add('peak');
+document.querySelectorAll('.project').forEach((p) => {
+    let { id } = p;
+    p.addEventListener('click', () => {
+        closeAllModals();
+        document.querySelector(`#${id}-card`).classList.remove('peak');
+        document.querySelector(`#${id}-card`).classList.add('move');
+    });
 });
 
-firstProjectBtn.addEventListener('mouseleave', () => {
-    document.querySelector('#one-card').classList.remove('peak');
-});
-
-firstProjectBtn.addEventListener('click', () => {
-    document.querySelector('#one-card').classList.remove('peak');
-    document.querySelector('#one-card').classList.add('move');
+document.querySelectorAll('.cancel-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+        closeAllModals();
+    });
 });

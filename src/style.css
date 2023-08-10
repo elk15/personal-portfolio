@@ -144,13 +144,6 @@ a {
     align-items: center;
 }
 
-/* .card-info div {
-    display: flex;
-    flex-direction: column;
-    min-width: 150px;
-    gap: 10px;
-} */
-
 .card h3 {
     font-size: 1.7rem;
     font-weight: 400;
@@ -167,11 +160,11 @@ a {
     display: flex;
     gap: 10px;
     flex-direction: row;
-    margin-left: 10px;
 }
 
 .card-title {
     display: flex;
+    gap: 20px;
 }
 
 .card-img {
@@ -180,8 +173,6 @@ a {
 }
 
 /* Card Animation */
-/* transform: translate(-50%, -50%); */
-/*     transform: translate(-50%, calc(-50% - 60vh)); */
 .card {
     position: absolute;
     background-color: var(--font-color);
@@ -196,10 +187,6 @@ a {
     gap: 15px;
     transform: translate(-50%);
     transition:transform 1s ease-in-out;
-}
-
-.peak {
-    transform: translate(-50%, calc(-50% - 10vh));
 }
 
 .move {
@@ -228,6 +215,19 @@ a {
         "title"
         "projects"
         "socials";
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .card-title {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .card-title h3{
+        
+        font-size: 1.5rem;
     }
 
     .title h1, .title h2 {
