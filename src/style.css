@@ -26,6 +26,7 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
@@ -113,21 +114,6 @@ a {
     align-items: center;
 }
 
-.card {
-    position: absolute;
-    background-color: var(--font-color);
-    color: rgb(27, 27, 27);
-    padding: var(--padding);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
-    max-width: 800px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
 .cancel-btn {
     width: 50px;
     border: none;
@@ -191,6 +177,33 @@ a {
 .card-img {
     margin-top: 30px;
     border-radius: 10px;
+}
+
+/* Card Animation */
+/* transform: translate(-50%, -50%); */
+/*     transform: translate(-50%, calc(-50% - 60vh)); */
+.card {
+    position: absolute;
+    background-color: var(--font-color);
+    color: rgb(27, 27, 27);
+    padding: var(--padding);
+    top: 110vh;
+    left: 50%; 
+    border-radius: 10px;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transform: translate(-50%);
+    transition:transform 1s ease-in-out;
+}
+
+.peak {
+    transform: translate(-50%, calc(-50% - 10vh));
+}
+
+.move {
+    transform: translate(-50%, calc(-50% - 60vh));
 }
 
 @media screen and (max-width: 1000px) {
