@@ -10,7 +10,6 @@ document.querySelectorAll('.project').forEach((p) => {
     let { id } = p;
     p.addEventListener('click', () => {
         closeAllModals();
-        document.querySelector(`#${id}-card`).classList.remove('peak');
         document.querySelector(`#${id}-card`).classList.add('move');
     });
 });

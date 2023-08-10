@@ -186,11 +186,13 @@ a {
     flex-direction: column;
     gap: 15px;
     transform: translate(-50%);
-    transition:transform 1s ease-in-out;
+    visibility: hidden;
+    transition:visibility 1s ease-in-out, transform 1s ease-in-out;
 }
 
 .move {
     transform: translate(-50%, calc(-50% - 60vh));
+    visibility: visible;
 }
 
 @media screen and (max-width: 1000px) {
