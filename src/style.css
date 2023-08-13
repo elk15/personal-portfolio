@@ -115,11 +115,9 @@ a {
 }
 
 .cancel-btn {
-    width: 50px;
+    width: 3rem;
     border: none;
     background: none;
-    position: absolute;
-    left: 90%;
     transform: translate(0%, -160%);
     fill: var(--font-color);
     cursor: pointer;
@@ -164,7 +162,13 @@ a {
 
 .card-title {
     display: flex;
+    justify-content: space-between;
+}
+
+.card-title div{
+    display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 .card-img {
@@ -223,12 +227,20 @@ a {
         padding: 16px;
     }
 
-    .card-title {
+    .cancel-btn {
+        transform: translate(0%, 0%);
+        fill: rgb(124, 124, 124);
+        width: 2.5rem;
+        align-self: flex-start;
+    }
+
+    .card-title div{
         flex-direction: column;
         gap: 10px;
+        align-items: flex-start;
+        justify-content: center;
     }
     .card-title h3{
-        
         font-size: 1.5rem;
     }
 
