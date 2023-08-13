@@ -216,6 +216,10 @@ a {
 }
 
 @media screen and (max-width: 600px) {
+    * {
+        font-size: 1.1rem;
+    }
+
     .container {
         grid-template-areas: 
         "title"
@@ -227,10 +231,14 @@ a {
         padding: 16px;
     }
 
+    .card p{
+        font-size: 1rem;
+    }
+
     .cancel-btn {
         transform: translate(0%, 0%);
         fill: rgb(124, 124, 124);
-        width: 2.5rem;
+        width: 2rem;
         align-self: flex-start;
     }
 
@@ -241,11 +249,15 @@ a {
         justify-content: center;
     }
     .card-title h3{
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .title h1, .title h2 {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
+    }
+
+    .title h2 {
+        margin-left: 0;
     }
 
     .socials{
