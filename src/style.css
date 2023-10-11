@@ -138,7 +138,7 @@ a {
 .card-info {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 20px;
     align-items: center;
 }
 
@@ -149,7 +149,8 @@ a {
 
 .card-info .techs {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 200px;
     gap: 10px;
     font-size: 1.6rem;
 }
